@@ -247,7 +247,7 @@ class Rig(object):
 
         # Init
         self.components_infos = {}
-        for guide in self.guides.values():
+        for k, guide in sorted(self.guides.items()):
             self.plog.log("Init", guide.fullName + " ("+guide.type+")", True)
 
             module_name = "gear.xsi.rig.component."+guide.type
